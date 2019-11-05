@@ -1,4 +1,4 @@
-# IntegrativeVAEs
+# Variational autoencoders for cancer data integration
 
 International initiatives such as the Molecular Taxonomy of Breast Cancer International Consortium (METABRIC) are collecting multiple data sets at different genome-scales with the aim to identify novel cancer bio-markers and predict patient survival. To analyse such data, several machine learning, bioinformatics and statistical methods have been applied, among them neural networks such as autoencoders. Although these models provide a good statistical learning framework to analyse multi-omic and/or clinical data, there is a distinct lack of work on how to integrate diverse patient data and identify the optimal design best suited to the available data. 
 
