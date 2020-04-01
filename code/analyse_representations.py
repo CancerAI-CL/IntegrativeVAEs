@@ -292,7 +292,7 @@ else:
                                                   accsTrain_NB.append(accTrain)
                                                    
                                                   y_p_classes=nb.predict(emb_test) 
-                                                  accsTest_NB=accuracy_score(test_labels[fold-1],y_p_classes)
+                                                  accsTest_NB.append(accuracy_score(test_labels[fold-1],y_p_classes))
                                                 else:
                                                   accsTrain_NB.append(0.0)
                                                   accsTest_NB.append(0.0)
@@ -306,7 +306,7 @@ else:
                                                   accsTrain_SVM.append(accTrain)
                                                    
                                                   y_p_classes=svm.predict(emb_test) 
-                                                  accsTest_SVM=accuracy_score(test_labels[fold-1],y_p_classes)
+                                                  accsTest_SVM.append(accuracy_score(test_labels[fold-1],y_p_classes))
                                                 else:
                                                   accsTrain_SVM.append(0.0)
                                                   accsTest_SVM.append(0.0)
@@ -321,7 +321,7 @@ else:
                                                   accsTrain_RF.append(accTrain)
                                                    
                                                   y_p_classes=rf.predict(emb_test) 
-                                                  accsTest_RF=accuracy_score(test_labels[fold-1],y_p_classes)
+                                                  accsTest_RF.append(accuracy_score(test_labels[fold-1],y_p_classes))
                                                 else:
                                                   accsTrain_RF.append(0.0)
                                                   accsTest_RF.append(0.0)
@@ -377,7 +377,7 @@ else:
                   accsTrain_NB.append(accTrain)
                    
                   y_p_classes=nb.predict(test_raw[fold-1]) 
-                  accsTest_NB=accuracy_score(test_labels[fold-1],y_p_classes)
+                  accsTest_NB.append(accuracy_score(test_labels[fold-1],y_p_classes))
                 else:
                   accsTrain_NB.append(0)
                   accsTest_NB.append(0)
@@ -391,7 +391,7 @@ else:
                   accsTrain_SVM.append(accTrain)
                    
                   y_p_classes=svm.predict(test_raw[fold-1]) 
-                  accsTest_SVM=accuracy_score(test_labels[fold-1],y_p_classes)
+                  accsTest_SVM.append(accuracy_score(test_labels[fold-1],y_p_classes))
                 else:
                   accsTrain_SVM.append(0)
                   accsTest_SVM.append(0)
@@ -406,7 +406,7 @@ else:
                   accsTrain_RF.append(accTrain)
                    
                   y_p_classes=rf.predict(test_raw[fold-1]) 
-                  accsTest_RF=accuracy_score(test_labels[fold-1],y_p_classes)
+                  accsTest_RF.append(accuracy_score(test_labels[fold-1],y_p_classes))
                 else:
                   accsTrain_RF.append(0)
                   accsTest_RF.append(0)
@@ -465,7 +465,7 @@ else:
                       accsTrain_NB.append(accTrain)
                        
                       y_p_classes=nb.predict(pcaTest) 
-                      accsTest_NB=accuracy_score(test_labels[fold-1],y_p_classes)
+                      accsTest_NB.append(accuracy_score(test_labels[fold-1],y_p_classes))
                     else:
                       accsTrain_NB.append(0)
                       accsTest_NB.append(0)
@@ -479,7 +479,7 @@ else:
                       accsTrain_SVM.append(accTrain)
                        
                       y_p_classes=svm.predict(pcaTest) 
-                      accsTest_SVM=accuracy_score(test_labels[fold-1],y_p_classes)
+                      accsTest_SVM.append(accuracy_score(test_labels[fold-1],y_p_classes))
                     else:
                       accsTrain_SVM.append(0)
                       accsTest_SVM.append(0)
@@ -494,7 +494,7 @@ else:
                       accsTrain_RF.append(accTrain)
                        
                       y_p_classes=rf.predict(pcaTest) 
-                      accsTest_RF=accuracy_score(test_labels[fold-1],y_p_classes)
+                      accsTest_RF.append(accuracy_score(test_labels[fold-1],y_p_classes))
                     else:
                       accsTrain_RF.append(0)
                       accsTest_RF.append(0)
